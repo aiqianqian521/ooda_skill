@@ -25,6 +25,7 @@
 
 | Version | Date | Updates |
 | --- | --- | --- |
+| 3.4.1 | 2026-07-15 | Added reusable learning capture to Iterate so meaningful rounds record reusable learning, assets, and next-time shortcuts without forcing trivial tasks to create lessons. |
 | 3.4.0 | 2026-07-15 | Made English the default runtime language in `SKILL.md`, added `SKILL.zh-CN.md` as the Chinese version, updated the OpenAI agent prompt, and documented language-version policy. |
 | 3.3.2 | 2026-07-15 | Added Verify and Close safeguards requiring both result correctness and execution-path correctness before verification can pass or a task can close. |
 | 3.3.1 | 2026-07-15 | Clarified `work_ooda/` is only for OODA process records (thinking, execution, review), not task deliverables. Added guardrail and Close-step field to track where actual deliverables go. |

@@ -298,6 +298,14 @@ Output:
 - Ineffective or worsening fix -> mark `[regression]`, perform the smallest safe rollback, and change approach.
 - Same issue remains after two consecutive fix attempts -> pause and ask for help; record attempted plans, rollback state, and failure reason.
 
+Reusable learning capture is required when a round produces a reusable pattern, checklist, command, test case, diagnostic method, decision rule, or other asset. Do not force learning capture for trivial work.
+
+When useful, record:
+
+- Reusable learning: what can be reused next time.
+- Reusable asset: the test case, checklist, command, template, document, script, or decision rule produced or improved.
+- Next-time shortcut: what this round makes faster or safer next time.
+
 Only write durable lessons to memory when they have long-term value.
 
 ### 7. Close
