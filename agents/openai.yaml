@@ -1,0 +1,4 @@
+interface:
+  display_name: "OODA"
+  short_description: "Run mandatory OODA rounds until verified solved."
+  default_prompt: "Use this skill to guide my task with OODA logic. Clarify my purpose first, write mandatory records under work_ooda/{YYYYMMDD-HHMMSS}-{task-slug}/ in the current project with 00-purpose.md, 0{N}-round-{N}.md, and summary.md. Show each OODA step's current logic to the user, reread relevant files each round, track delta checks and severity, verify both result and execution path, rerun until verified solved, and ask me instead of guessing when intent, context, risk, repeated failure, or tradeoffs are unclear."
