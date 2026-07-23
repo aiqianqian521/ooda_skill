@@ -1,5 +1,5 @@
-version: "3.4.0"
-date: "2026-07-15"
+version: "3.8.0"
+date: "2026-07-23"
 type: instruction_behavior_scenarios
 target:
   - SKILL.md
