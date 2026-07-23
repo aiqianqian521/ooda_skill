@@ -16,7 +16,6 @@ OODA 支持多个 AI Coding Agent 环境，安装方式相同：将 skill 文件
 
 | 环境 | 全局路径 | 项目路径 | 调用方式 |
 |------|---------|---------|---------|
-| **CodeFuse/百炼** | `~/.codefuse/engine/cc/skills/ooda/` | — | `/ooda` |
 | **Claude Code** | `~/.claude/skills/ooda/` | `.claude/skills/ooda/` | `/ooda` |
 | **Codex** | `~/.codex/skills/ooda/` | `.codex/skills/ooda/` | `/ooda` |
 | **Kilo Code** | `~/.kilocode/skills/ooda/` | `.kilocode/skills/ooda/` | `/ooda` |
