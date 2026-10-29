@@ -1,22 +1,25 @@
 <!-- Reference navigation added during skill optimization. Original source content follows. -->
 
+> ⚠️ **HISTORICAL ARCHIVE — NOT RUNTIME INSTRUCTIONS.**
+> This file preserves superseded versions (v2.1, v2.0, and a portable framework) whose rules **contradict** the current `SKILL.md`. Concrete example: v2.1 below opens with "快速循环 > 完美计划" (fast loop beats planning), which is the opposite of the current mandatory five-task flow.
+> Read this file only to study how the skill evolved. **Never execute a rule from this file.** If any statement here conflicts with `SKILL.md`, `SKILL.md` wins and the statement below is historical only. Do not treat any section below as a current workflow.
+
 # OODA Full Reference Navigation
 
-Use this file only when the compact `SKILL.md` is not enough.
+Use this file only as an archive. Current adaptive standard/strict routing and confirmation rules in `SKILL.md` take precedence over every older version below.
 
-- Start with `OODA 循环技能 v2.1` for the current lightweight workflow.
+- `OODA 循环技能 v2.1` — a draft from an earlier era, kept for historical study only. It is **not** the current lightweight workflow.
 - Search `Rationalization Table` or `借口反驳表` for common agent excuses and rebuttals.
 - Search `HARD GATES` for gate rules and confirmation constraints.
 - Search `QC 使用场景` for when to use heavier validation.
-- Search `OODA 循环技能 v2.0` for the older strict QC-heavy version.
-- Search `OODA 通用执行框架` for portable/global-memory wording.
-- The compact `SKILL.md` now adds the mandatory executor flow: purpose-first execution, detailed step-by-step user-visible OODA output, output records under `work_ooda/{YYYYMMDD-HHMMSS}-{任务名}/` in the current project with `00-目的.md`, `0{N}-第{N}轮.md`, and `summary.md`, required rereads, round 2+ delta checks, issue severity, root-cause and goal-gap diagnosis, scope lock, self-check, final status `✅完成/⚠️部分/❌需人工`, automatic reruns until verified solved, two-failed-round pause, and `paused_waiting_user_input` when the agent lacks enough information.
+- Search `OODA 循环技能 v2.0` for the older strict QC-heavy version. Superseded; kept for comparison only.
+- Search `OODA 通用执行框架` for portable/global-memory wording. Superseded; kept for comparison only.
+- The canonical `SKILL.md` defines purpose-first execution, step-by-step OODA records under `work_ooda/{YYYYMMDD-HHMMSS}-{task-slug}/` in the current project with `00-purpose.md`, `{NN}-round-{N}.md`, `state-R{N}.md`, and `summary.md`. Its route and assurance rules, including structural skill-upgrade strict assurance, take precedence over historical examples below.
+- Search `5W1H Divergent Scan` or `5W1H 发散扫描` for the mandatory pre-U&Q six-dimension scan (v4.0.0).
+- Search `Data Reconciliation Diagnostic Mode` or `数据对账诊断模式` for the data-mismatch diagnostic flow with divergence-point tracing and handoff reports (v4.0.0).
 
-Prefer v2.1 unless the user explicitly asks for stricter QC, older behavior, or full framework details.
+Prefer the current `SKILL.md` execution contract. The versions below are history, not an alternative runtime instruction; where they disagree with `SKILL.md` they are simply wrong for this skill today.
 
----
-name: ooda
-description: OODA 循环（Observe-Orient-Decide-Act）是 John Boyd 提出的敏捷决策框架。核心是快速感知、快速判断、快速决策、快速行动，比对手更快完成循环。融合花叔思想的规则约束和借口反驳，但保持原始敏捷性。
 ---
 
 # OODA 循环技能 v2.1
@@ -218,7 +221,8 @@ description: OODA 循环（Observe-Orient-Decide-Act）是 John Boyd 提出的�
 
 ---
 
-## 🔒 HARD GATES（关键门控，其他灵活）
+## 🔒 HARD GATES
+> 输出模板强制纪律（state 每轮新增不覆写 / 真实时间戳禁 000000 占位 / 每轮 ADR 字段缺一不可 / 压缩恢复锚点齐全 / 禁止编造证据）见 SKILL.md 的「强制执行纪律」段。其中前 4 条**只适用于跑完整循环的任务**（微/中/宏循环），分析验证类简化路径与琐碎任务按设计豁免；第 5 条「禁止编造证据」对每个任务无例外适用。违反即不可 Close，含义是不得标记 done / partial-verified，应以 `needs-human` 关闭并列出未满足项。（关键门控，其他灵活）
 
 | 门控 | 规则 | 理由 |
 |------|------|------|
@@ -594,6 +598,8 @@ QC 铁律验证，不妥协。
 | 2 | 临时文件已清理？ | ✅ | "留着没关系" → 清理=整洁 |
 | 3 | 输出文件已归档？ | ✅ | "在工作目录" → 归档=有序 |
 | 4 | 任务状态已标记？ | ✅ | "知道完成了" → 必须标记 |
+| 5 | 收尾验证轮已跑？ | ✅ | "就抽查最后一步" → 多轮/多步必须整链重跑 |
+| 6 | 重要决策已落正式文档？ | ✅ | "记录在过程里" → 决策类任务必须产出独立交付物 |
 
 ---
 
@@ -652,6 +658,8 @@ QC 铁律验证，不妥协。
 | 8 | 错误已捕获并处理？ | ✅ |
 | 9 | 复盘总结已输出？ | ✅ |
 | 10 | 临时文件已清理？ | ✅ |
+| 11 | 收尾验证轮通过？（多轮/多步任务） | ✅ |
+| 12 | 正式决策文档产出并校验通过？（决策类任务） | ✅ |
 
 ---
 
@@ -677,7 +685,7 @@ QC 铁律验证，不妥协。
 
 ```
 .planning/
-├── ooda-state.md       # 循环状态（当前 Phase）
+├── ooda-state-R{N}.md       # 循环状态（当前 Phase）
 ├── qc-checklist.md     # QC 检查清单（逐项记录）
 ├── decisions.md        # 决策文档
 ├── plans/              # 执行计划
