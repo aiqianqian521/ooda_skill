@@ -138,3 +138,16 @@ OODA 会自动：
 - 可复用的对比和复盘记录放在当前项目的 `work_ooda/` 下；临时验证日志放在 `output/` 下并忽略，除非刻意发布。
 - `SKILL.md` 为默认英文运行时入口。中文运行时指引在 `SKILL.zh-CN.md`。
 - 行为变更时，在版本历史表中追加一行。仅打包层面的改动不属于行为变更，不追加行。
+
+## 配套项目（生态互链）
+
+`ooda` 是一个五仓 agent skill 生态里的「执行纪律」层：下面的编排引擎把它当能力层挂载，另外三个仓是同族 skill，产出走同一套输出结构。
+
+| 仓库 | 是什么 | 与 `ooda` 的关系 |
+|---|---|---|
+| [aiqianqian521/sloth-loop](https://github.com/aiqianqian521/sloth-loop) | 零 LLM 的任务编排引擎（身体） | 驱动 OODA 轮次，通过 `skills/ooda` 子模块挂载本 skill |
+| [aiqianqian521/architect-skills](https://github.com/aiqianqian521/architect-skills) | 19 个架构评估 skill（Agent / RAG / 安全 / 合规 / 可观测性 / 成本…） | 同族 skill，产出走统一的输出结构 |
+| [aiqianqian521/obsidian-skills](https://github.com/aiqianqian521/obsidian-skills) | 14 个 Obsidian 知识库 skill | 同族 skill，产出走统一的输出结构 |
+| [aiqianqian521/ai-skill-output-template](https://github.com/aiqianqian521/ai-skill-output-template) | 声明式多模板注册中心 | 定义全族 skill 共同遵守的报告输出结构 |
+
+> 上面的四个仓库都反向链接回本仓；英文版 `README.md` 里有同一张表。

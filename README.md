@@ -141,3 +141,16 @@ OODA will automatically:
 - Keep reusable comparison and review records under `work_ooda/` under the current project; keep temporary validation logs under `output/` ignored unless intentionally published.
 - Keep `SKILL.md` as the default English runtime entry. Keep Chinese runtime guidance in `SKILL.zh-CN.md`.
 - When behavior changes, append a row to the Version History table. Packaging-only changes do not get a row.
+
+## Related Projects
+
+`ooda` is the execution-discipline layer of a five-repository agent-skill ecosystem. The orchestration engine below mounts it as a capability; the other three repositories are sibling skills that publish under the same output contract.
+
+| Repository | What it is | Relation to `ooda` |
+| --- | --- | --- |
+| [aiqianqian521/sloth-loop](https://github.com/aiqianqian521/sloth-loop) | Zero-LLM task orchestration engine (the "body") | Drives OODA rounds and mounts this skill through the `skills/ooda` submodule |
+| [aiqianqian521/architect-skills](https://github.com/aiqianqian521/architect-skills) | 19 architecture-review skills (agent, RAG, security, compliance, observability, cost, ...) | Sibling skill family; reports follow the shared output contract |
+| [aiqianqian521/obsidian-skills](https://github.com/aiqianqian521/obsidian-skills) | 14 Obsidian knowledge-base skills | Sibling skill family; reports follow the shared output contract |
+| [aiqianqian521/ai-skill-output-template](https://github.com/aiqianqian521/ai-skill-output-template) | Declarative output-template registry | Defines the report structure that every skill in this family emits |
+
+> Each of those four repositories links back to this one, and the same table exists in the Chinese README (`README.zh-CN.md`).
