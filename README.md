@@ -152,5 +152,6 @@ OODA will automatically:
 | [aiqianqian521/architect-skills](https://github.com/aiqianqian521/architect-skills) | 19 architecture-review skills (agent, RAG, security, compliance, observability, cost, ...) | Sibling skill family; reports follow the shared output contract |
 | [aiqianqian521/obsidian-skills](https://github.com/aiqianqian521/obsidian-skills) | 14 Obsidian knowledge-base skills | Sibling skill family; reports follow the shared output contract |
 | [aiqianqian521/ai-skill-output-template](https://github.com/aiqianqian521/ai-skill-output-template) | Declarative output-template registry | Defines the report structure that every skill in this family emits |
+| [aiqianqian521/go-sec-audit](https://github.com/aiqianqian521/go-sec-audit) | Go source-code security audit skill (evidence-gated verdicts) | Sibling domain skill; its findings can be closed inside an OODA round |
 
 > Each of those four repositories links back to this one, and the same table exists in the Chinese README (`README.zh-CN.md`).
