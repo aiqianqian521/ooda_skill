@@ -150,5 +150,6 @@ OODA 会自动：
 | [aiqianqian521/obsidian-skills](https://github.com/aiqianqian521/obsidian-skills) | 14 个 Obsidian 知识库 skill | 同族 skill，产出走统一的输出结构 |
 | [aiqianqian521/ai-skill-output-template](https://github.com/aiqianqian521/ai-skill-output-template) | 声明式多模板注册中心 | 定义全族 skill 共同遵守的报告输出结构 |
 | [aiqianqian521/go-sec-audit](https://github.com/aiqianqian521/go-sec-audit) | Go 源码安全审计 skill（证据门判决） | 同族专项 skill：审计结论可在 OODA 轮次内闭环 |
+| [aiqianqian521/go-rce-hunt](https://github.com/aiqianqian521/go-rce-hunt) | Go RCE 猎取 skill（六相 RCE 模型） | 同族专项 skill：一次猎取的结论按证据门定级，可在轮次内闭环 |
 
 > 上面的四个仓库都反向链接回本仓；英文版 `README.md` 里有同一张表。
